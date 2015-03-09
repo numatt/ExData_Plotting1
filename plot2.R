@@ -15,7 +15,7 @@ plot2 <- function(){
     
     # Build a datetime column
     data <- data[data$Date=="1/2/2007" | data$Date=="2/2/2007",]
-    data$Datetime = paste(data$Date,data$Time)
+    data$Datetime <- paste(data$Date,data$Time)
     data$Datetime <- strptime(data$Datetime,format="%d/%m/%Y %H:%M:%S")
     
     # Plot the graph
